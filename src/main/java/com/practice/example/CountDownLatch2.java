@@ -18,6 +18,7 @@ public class CountDownLatch2 {
     private static final int threadCount = 200;
 
     public static void main(String[] args) throws Exception {
+        System.out.println("this is my first code on mac");
         ExecutorService exec = Executors.newCachedThreadPool();
         final CountDownLatch countDownLatch = new CountDownLatch(threadCount);
         for (int i = 0; i < threadCount; i++) {
