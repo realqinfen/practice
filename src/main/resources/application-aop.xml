@@ -1,0 +1,36 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/context/spring-context-4.1.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+
+    <!-- 注解驱动加上这个 -->
+     <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+ <!--   <bean id="xmlAspect" class="com.demo.aop.service.XmlAspect"/>
+    <bean id="memberService" class="com.demo.aop.service.MemberServiceImpl"/>
+
+    &lt;!&ndash; AOP配置 &ndash;&gt;
+    <aop:config>
+        &lt;!&ndash; 声明一个切面，并注入切面bean，相当于@Aspect &ndash;&gt;
+        <aop:aspect id="aspect" ref="xmlAspect" order="1">
+            &lt;!&ndash; 配置一个切入点，相当于@Pointcut &ndash;&gt;
+&lt;!&ndash;            <aop:pointcut id="simplePointcut" expression="execution(* *.getMember(..))"/>&ndash;&gt;
+&lt;!&ndash;            <aop:pointcut id="simplePointcut" expression="execution(* com.demo.aop.service.MemberService.getMember(..)) and args(name,age)"/>&ndash;&gt;
+            &lt;!&ndash; 配置通知，相当于@Before,@After,@AfterReturn,@Around,@AfterThrowing &ndash;&gt;
+&lt;!&ndash;            <aop:before method="before" pointcut="execution(* com.demo.aop.service.MemberService.getMember(..)) and args(name,age)"/>&ndash;&gt;
+&lt;!&ndash;            <aop:before method="after" pointcut="execution(* com.demo.aop.service.MemberService.saveMember(..)) and args(member,joinpoint)"/>&ndash;&gt;
+            <aop:around method="around" pointcut="execution(* com.demo.aop.service.MemberService.saveMember(..)) and args(joinpoint,name)"/>
+            &lt;!&ndash;<aop:after pointcut-ref="simplePointcut" method="after"/>
+            <aop:after-returning pointcut-ref="simplePointcut" method="afterReturn"/>
+            <aop:after-throwing pointcut-ref="simplePointcut" method="afterThrow" throwing="ex"/>
+            <aop:around pointcut-ref="simplePointcut" method="around"/>&ndash;&gt;
+        </aop:aspect>
+    </aop:config>
+-->
+</beans>
